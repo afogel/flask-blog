@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session, flask, redirect, \
+from flask import Flask, render_template, request, session, flash, redirect, \
 	url_for, g
 import sqlite3
 

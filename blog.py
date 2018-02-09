@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, session, flash, redirect, \
 	url_for, g
 import sqlite3
 import secret_key_generator
+from sessions_helper import login_required
 
 # set config variables here
 DATABASE = 'blog.db'
@@ -40,6 +41,7 @@ def logout():
 	return redirect(url_for('login'))
 
 @app.route('/main')
+@login_required
 def main():
 	return render_template('main.html')
 

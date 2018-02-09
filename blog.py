@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, session, flash, redirect, \
 	url_for, g
 import sqlite3
 import secret_key_generator
+import pdb # python debugger; to set breakpoint: pdb.set_trace()
 from sessions_helper import login_required
 
 # set config variables here
